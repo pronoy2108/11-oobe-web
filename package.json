@@ -1,0 +1,33 @@
+{
+  "name": "tedicross",
+  "version": "0.10.8",
+  "description": "Bridging Telegram and Discord",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TediCross/TediCross.git"
+  },
+  "scripts": {
+    "start": "node main.js",
+    "start:dev": "nodemon --inspect main.js -i data/",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "js-yaml": "^3.13.1",
+    "mime": "^2.4.4",
+    "moment": "^2.24.0",
+    "ramda": "^0.27.0",
+    "semver": "^7.3.4",
+    "simple-markdown": "^0.7.3",
+    "telegraf": "^4.4.1",
+    "yargs": "^13.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.2",
+    "prettier": "^2.0.5"
+  }
+}
