@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <!--WinJS references-->
+    <script src="/Microsoft.WinJS-reduced/js/base.js"></script>
+
+    <!-- requirejs references -->
+    <script src="/core/js/require-helpers.js"></script>
+    <script src="/core/js/requirePath-config-core.js"></script>
+    <script data-main="/webapps/inclusiveOobe/js/oobeaadcageconfirmation-page.js" src="/lib/require.js"></script>
+</head>
+<body class="webapp-inner">
+    <main class="body-container">
+        <div class="container-content">
+            <oobe-header params="title: title, subtitle: subHeaderText"></oobe-header>
+
+            <!-- ko ifnot: learnMoreVisible -->
+            <div class="content-box vertical-center-content">
+                <oobe-listview autofocus params="items: items, selectedItem: selectedItem, selectionFollowsFocus: false, binaryChoice: true, listAccessibleName: $root.resourceStrings['OobeAadcAgeConfirmationTitle']">
+                    <div class="list-icon" role="presentation" aria-hidden="true">
+                        <i class="icon" role="presentation" data-bind="html: icon"></i>
+                    </div>
+                    <div class="list-text">
+                        <div class="secondary-text" data-bind="text: valueText"></div>
+                        <div class="" data-bind="text: descriptionText"></div>
+                    </div>
+                </oobe-listview>
+            </div>
+            <!-- /ko -->
+
+            <!-- ko if: learnMoreVisible -->
+            <div class="iframe-row med-iframe">
+                <iframe class="eula-iframe" x-ms-format-detection="none" sandbox="allow-same-origin allow-scripts" id="learnMoreIFrame" data-bind="iframeContent: { content:$root.learnMoreContent, dir:document.documentElement.dir, focusBody: true }, attr: { 'aria-label': resourceStrings.LearnMoreTitle }"></iframe>
+            </div>
+            <!-- /ko -->
+        </div>
+        <oobe-footer params="flexEndButtons: flexEndButtons"></oobe-footer>
+    </main>
+</body>
+</html>
