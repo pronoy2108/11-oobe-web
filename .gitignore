@@ -1,0 +1,5 @@
+*.winmd
+*.p7x
+*.xml
+*.dll
+*.pri
