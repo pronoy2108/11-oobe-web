@@ -1,0 +1,27 @@
+{
+  "name": "11-oobe-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "grunt-cli": "^1.4.3",
+    "winjs": "^4.4.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pronoy2108/11-oobe-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pronoy2108/11-oobe-web/issues"
+  },
+  "homepage": "https://github.com/pronoy2108/11-oobe-web#readme"
+}
